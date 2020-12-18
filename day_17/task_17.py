@@ -55,7 +55,7 @@ L = len(lines)
 N_cycles = 6
 dim = L+2*N_cycles+2
 dim2 = 2*N_cycles+4
-cube = np.zeros((dim, dim,dim2,dim2), dtype = 'u1')
+cube = np.zeros((dim, dim,dim2,dim2))
 
 for i, line in enumerate(lines):
     j = 0
