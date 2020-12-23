@@ -22,12 +22,11 @@ for line in lines[25:]:
         if int(nums) not in valid_nums:
             invalids.append(int(nums))
             invalid = True
-            # print('invaldi', line)
     if not invalid:
         for nums in line.split(','):
             vals.append(int(nums))
         valids.append(vals)
-        # print('valid: ', line)     
+
 # print(sum(invalids))
 
 my_ticket = []
@@ -35,6 +34,7 @@ line = lines[22]
 for nums in line.split(','):
     my_ticket.append(int(nums))
 print(my_ticket)
+
 ### part 2
 categories = list(range(20))
 
@@ -54,7 +54,7 @@ for k in range(20):
         pos.append(value[k])
     positions.append(pos)
 
-cats = []
+cats = []   ## valid categories for every position
 for pos in positions:
     cat = []
     for k in range(20):
@@ -76,7 +76,6 @@ while k >= 0:
                     final_cats[r] = num
                     taken.append(num)
             k -=1
-            #print(final_cats)
 
 print(final_cats)
 
