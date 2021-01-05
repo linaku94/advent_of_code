@@ -18,6 +18,7 @@ def conc(rule):
                 s += k
             rule[i] = [s]
         else:
+            print(i)
             conc(rule[i])
     return(rule)
 
@@ -38,7 +39,8 @@ def all_valids(rules, valids):      ## works but takes too long :/
             valids.extend(valids2)
     return(valids)
 
-filename = 'puzzle_input_19.txt'
+# filename = 'puzzle_input_19.txt'
+filename = 'puzzle_input_19_2.txt'
 # filename = 'test.txt'
 file = open(filename, 'r')
 
@@ -70,6 +72,7 @@ for line in lines[134:]:
 print(messages[0])
 print(rules)
 
+k = 0 
 for i in rules.values():
     repl_rule(rules, i)
 

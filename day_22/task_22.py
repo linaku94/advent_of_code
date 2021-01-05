@@ -17,16 +17,16 @@ def game(player1, player2):
     
     if len(player1) != 0:
         winner = player1
-        print('winner is player 1 in {} rounds'.format(i))
+        # print('winner is player 1 in {} rounds'.format(i))
     else:
         winner = player2
-        print('winner is player 2 in {} rounds'.format(i))
+        # print('winner is player 2 in {} rounds'.format(i))
 
     score = 0
     for i in range(len(winner)):
         score += (len(winner)-i)* int(winner[i])
-        print(score, int(winner[i]))
-    print('final score: ', score)
+        # print(score, int(winner[i]))
+    # print('final score: ', score)
 
     return(player1, player2, score)
 
@@ -89,8 +89,8 @@ for line in lines[1:]:
 player2.pop(0)
 player2.pop(0)
 
-## part 1
-print(game(player1, player2))
+# ## part 1
+# print(game(player1, player2))
 
-## part 2 takes a while...
+## part 2 
 print(recursive_game(player1, player2, []))
